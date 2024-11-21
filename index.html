@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Commerce App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>E-Commerce App</h1>
+  </header>
+  <main>
+    <!-- Halaman Daftar Produk -->
+    <section id="product-list">
+      <h2>Daftar Produk</h2>
+      <div class="product" data-id="1" data-name="Produk A" data-price="100000">
+        <p>Produk A - Rp 100,000</p>
+        <button onclick="addToCart(1)">Tambah ke Keranjang</button>
+      </div>
+      <div class="product" data-id="2" data-name="Produk B" data-price="200000">
+        <p>Produk B - Rp 200,000</p>
+        <button onclick="addToCart(2)">Tambah ke Keranjang</button>
+      </div>
+      <div class="product" data-id="3" data-name="Produk C" data-price="300000">
+        <p>Produk C - Rp 300,000</p>
+        <button onclick="addToCart(3)">Tambah ke Keranjang</button>
+      </div>
+    </section>
+
+    <!-- Halaman Keranjang -->
+    <section id="cart">
+      <h2>Keranjang Belanja</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Nama Produk</th>
+            <th>Harga</th>
+            <th>Jumlah</th>
+            <th>Ubah</th>
+          </tr>
+        </thead>
+        <tbody id="cart-items"></tbody>
+      </table>
+      <p id="total-price">Total: Rp 0</p>
+    </section>
+
+    <!-- Halaman Checkout -->
+    <section id="checkout">
+      <h2>Checkout</h2>
+      <button onclick="checkout()">Bayar Sekarang</button>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
